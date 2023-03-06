@@ -1,20 +1,29 @@
 import { Profile } from './Profile/Profile'
-import { Statistics } from './Statistics/Statistics';
+import Statistics from './Statistics/StatisticsList';
+import FriendList from './FriendList/FriendList';
+import TransactionHistory from './Transactions/TransactionList';
 import user from '../user.json';
 import data from '../data.json';
+import friends from '../friends.json';
+import transactions from '../transactions.json';
+
+import { Container } from './App.styled';
 
 export const App = () => {
   return (
-    <div>
+    <Container>
       <Profile
         username={user.username}
+        avatar={user.avatar}
         tag={user.tag}
         location={user.location}
-        avatar={user.avatar}
         stats={user.stats}
       />
-      <Statistics title="Upload stats" stats={data} />
-      <Statistics stats={data} />
-    </div>
+      <Statistics title="Upload stats" data={data} />
+      <FriendList friends={friends} />
+      <TransactionHistory transactions={transactions} />
+    </Container>
   );
 };
+
+
