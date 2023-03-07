@@ -1,20 +1,21 @@
 import TransactionItem from "./TransactionItem";
+import { TransactionTable, TransactionHead } from "./Transactions.styled";
 
 const TransactionHistory = ({ transactions }) => {
     return (
-        <table class="transaction-history">
+        <TransactionTable class="transaction-history">
             <thead>
-            <tr>
-            <th>Type</th>
-            <th>Amount</th>
-            <th>Currency</th>
-            </tr>
+                <tr>
+                    <th>Type</th>
+                    <th>Amount</th>
+                    <th>Currency</th>
+                </tr>
             </thead>
 
             <tbody>
                 <TransactionItem transactions={transactions}/>
             </tbody>
-        </table>
+        </TransactionTable>
     )
 }
 

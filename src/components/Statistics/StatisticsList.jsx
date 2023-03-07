@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types';
 import StatisticsItem from "./StatisticsItem";
+import {Title, StatisticList} from './Statistics.styled'
 
 const Statistics = ({ title = '', data }) => {
     return (
         <section class="statistics">
-            {title ? <h2 className="title">{title}</h2> : null}
-            <ul class="stat-list">
+            {title ? <Title>{title}</Title> : null}
+            <StatisticList>
                 <StatisticsItem data={data} />
-            </ul>
+            </StatisticList>
         </section>
     )
 }

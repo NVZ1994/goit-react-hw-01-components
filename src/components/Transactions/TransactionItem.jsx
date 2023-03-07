@@ -1,13 +1,14 @@
-import PropTypes from 'prop-types'; 
+import PropTypes from 'prop-types';
+import { TransactionData, TransactionRow } from './Transactions.styled';
 
 const TransactionItem = ({ transactions }) => {
     return (
         transactions.map(transaction => {
-            return <tr key={transaction.id}>
-                        <td>{transaction.type}</td>
-                        <td>{transaction.amount}</td>
-                        <td>{transaction.currency}</td>
-                    </tr>
+            return <TransactionRow key={transaction.id}>
+                        <TransactionData>{transaction.type}</TransactionData>
+                        <TransactionData>{transaction.amount}</TransactionData>
+                        <TransactionData>{transaction.currency}</TransactionData>
+                    </TransactionRow>
         })
     )
 }
