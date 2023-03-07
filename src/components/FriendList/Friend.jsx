@@ -4,10 +4,10 @@ import { FriendElement, SpanGreen ,SpanRed } from './Friends.styled';
 const Friend = ({ friends }) => {
     return (
         friends.map(friend => {
-            return <FriendElement class="item" key={friend.id}>
+            return <FriendElement key={friend.id}>
                     {friend.isOnline? <SpanGreen></SpanGreen> : <SpanRed></SpanRed>}
-                    <img class="avatar" src={friend.avatar} alt={friend.name} width="48" />
-                    <p class="name">{friend.name}</p>
+                    <img src={friend.avatar} alt={friend.name} width="48" />
+                    <p >{friend.name}</p>
                     </FriendElement>
         })
     )

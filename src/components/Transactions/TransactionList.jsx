@@ -1,9 +1,9 @@
 import TransactionItem from "./TransactionItem";
-import { TransactionTable, TransactionHead } from "./Transactions.styled";
+import { TransactionTable } from "./Transactions.styled";
 
 const TransactionHistory = ({ transactions }) => {
     return (
-        <TransactionTable class="transaction-history">
+        <TransactionTable>
             <thead>
                 <tr>
                     <th>Type</th>

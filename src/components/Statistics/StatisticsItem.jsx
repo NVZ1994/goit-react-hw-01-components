@@ -4,9 +4,9 @@ import {StatisticItem} from './Statistics.styled'
 const StatisticsItem = ({ data }) => {
     return data.map(element => {
         return (
-        <StatisticItem class="item" key={element.id}>
-            <span class="label">{element.label}</span>
-            <span class="percentage">{element.percentage}</span>
+        <StatisticItem key={element.id}>
+            <span >{element.label}</span>
+            <span >{element.percentage}</span>
         </StatisticItem>
         )
     })

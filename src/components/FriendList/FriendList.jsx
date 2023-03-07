@@ -3,7 +3,7 @@ import { ListOfFriends } from './Friends.styled';
 
 const FriendList = ({ friends }) => {
     return (
-    <ListOfFriends class="friend-list">
+    <ListOfFriends >
     <Friend friends={friends}/>
     </ListOfFriends>)
 }

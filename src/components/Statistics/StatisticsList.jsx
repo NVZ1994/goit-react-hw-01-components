@@ -4,7 +4,7 @@ import {Title, StatisticList} from './Statistics.styled'
 
 const Statistics = ({ title = '', data }) => {
     return (
-        <section class="statistics">
+        <section>
             {title ? <Title>{title}</Title> : null}
             <StatisticList>
                 <StatisticsItem data={data} />
