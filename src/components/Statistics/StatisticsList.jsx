@@ -7,7 +7,12 @@ const Statistics = ({ title = '', data }) => {
         <section>
             {title && <Title>{title}</Title> }
             <StatisticList>
-                <StatisticsItem data={data} />
+                {data.map(item =>
+                    <StatisticsItem
+                        key={item.id}
+                        label={item.label}
+                        percentage={item.percentage}    
+                    />)}
             </StatisticList>
         </section>
     )
@@ -15,6 +20,7 @@ const Statistics = ({ title = '', data }) => {
 
 Statistics.propTpes = {
     title: PropTypes.string,
+    data: PropTypes.arrayOf(PropTypes.oneOfType(PropTypes.string,PropTypes.number,))
 }
 
 export default Statistics;

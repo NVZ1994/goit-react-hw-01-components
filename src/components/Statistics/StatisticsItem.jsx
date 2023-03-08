@@ -1,23 +1,19 @@
 import PropTypes from "prop-types";
 import {StatisticItem} from './Statistics.styled'
 
-const StatisticsItem = ({ data }) => {
-    return data.map(element => {
+const StatisticsItem = ({ label, percentage }) => {
         return (
-        <StatisticItem key={element.id}>
-            <span >{element.label}</span>
-            <span >{element.percentage}</span>
+        <StatisticItem>
+            <span >{label}</span>
+            <span >{percentage}</span>
         </StatisticItem>
         )
-    })
-}
+    }
+
 
 StatisticsItem.propTypes = {
-    data: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.number,
-    ])))
-
+    label: PropTypes.string,
+    percentage: PropTypes.number,
 }
 
 export default StatisticsItem

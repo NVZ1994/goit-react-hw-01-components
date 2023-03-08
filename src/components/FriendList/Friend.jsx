@@ -10,11 +10,9 @@ const Friend = ({ avatar, name, isOnline}) => {
 }  
     
 Friend.propTypes = {
-    friends: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.bool,
-        PropTypes.number,
-    ])))
+    avatar: PropTypes.string,
+    name: PropTypes.string,
+    isOnline: PropTypes.bool,
 }
 
 export default Friend
