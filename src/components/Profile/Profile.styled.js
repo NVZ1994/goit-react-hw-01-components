@@ -5,10 +5,11 @@ export const ProfileWrapper = styled.div`
         background-color: lightblue;
         width: 750px;
         text-align: center;
-    img{
+    img {
         width: 300px
     }
-    .name {
+
+    p:first-of-type {
         font-weight: bold;
     }
     
