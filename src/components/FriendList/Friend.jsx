@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
-import { FriendElement, SpanGreen ,SpanRed } from './Friends.styled';
+import { FriendElement, Span } from './Friends.styled';
 
 const Friend = ({ friends }) => {
     return (
         friends.map(friend => {
             return <FriendElement key={friend.id}>
-                    {friend.isOnline? <SpanGreen></SpanGreen> : <SpanRed></SpanRed>}
+                    <Span isOnline={friend.isOnline}></Span>
                     <img src={friend.avatar} alt={friend.name} width="48" />
                     <p >{friend.name}</p>
                     </FriendElement>
@@ -15,8 +15,8 @@ const Friend = ({ friends }) => {
     
 Friend.propTypes = {
     friends: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.oneOfType([
-        PropTypes.bool,
         PropTypes.string,
+        PropTypes.bool,
         PropTypes.number,
     ])))
 }

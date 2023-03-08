@@ -15,16 +15,16 @@ export const FriendElement = styled.li`
     gap: 10px;
 `
 
-export const SpanGreen = styled.span`
-    background-color: green;
+export const Span = styled.span`
     border-radius: 50%;
     height: 10px;
-    width: 10px;
-`
+    width: 10px;  
 
-export const SpanRed = styled.span`
-    background-color: red;
-    border-radius: 50%;
-    height: 10px;
-    width: 10px;
+    background-color: ${props => {
+    if (props.isOnline) {
+        return 'green';
+    } else {
+        return 'red';
+    }
+    }};
 `
